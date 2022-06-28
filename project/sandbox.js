@@ -1,9 +1,14 @@
-const crud = require("./crud/firebase"); 
+const crud = require("./crud/firebase");
 
-async function salvar(){
-    const savedData = await crud.salvar("pessoas", "JgluQ4mFWuift2cC0wCP",
-    { nome: "Vytor", sobrenome: "Rosa", idade: 17 });
+async function salvar() {
+    const savedData = await crud.salvar("editora", "",
+        {});
     console.log(savedData);
 }
 
-salvar();
+async function buscarDados() {
+    const dados = await crud.pegar("pessoa");
+    console.log(dados);
+}
+
+buscarDados();

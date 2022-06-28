@@ -3,8 +3,8 @@ const router = express.Router();
 
 const usuariosHandler = require("./usuarios.handler");
 
-router.get("/", (req, res) => {
-
+router.get("/usuarios", (req, res) => {
+    res.send("usuarios");
 })
 
 module.exports = router;
