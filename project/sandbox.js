@@ -7,8 +7,8 @@ async function salvar() {
 }
 
 async function buscarDados() {
-    const dados = await crud.pegar("pessoa");
+    const dados = await crud.pegar("autor");
     console.log(dados);
 }
 
-buscarDados();
+salvar();

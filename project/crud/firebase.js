@@ -60,7 +60,15 @@ async function pegar(nomeTabela) {
   return lista;
 }
 
+async function deletar(nomeTabela, id){
+  const dado = await deleteDoc(doc(db, nomeTabela, id));
+    return{
+        message: `${id} deletado`
+    }
+}
+
 module.exports = {
   salvar,
-  pegar
+  pegar,
+  deletar
 }

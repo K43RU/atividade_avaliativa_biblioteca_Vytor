@@ -7,7 +7,7 @@ app.use("/api", router);
 
 
 app.get("/", (req, res) => {
-    res.send("fjsadlfjaslkjdfk");
+    res.send("Biblioteca Rosa - Home");
 })
 
 app.listen(3000, () => {
