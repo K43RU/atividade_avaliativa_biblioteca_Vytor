@@ -6,7 +6,7 @@ async function buscarPessoas(){
     return (dados);
 }
 
-async function salvarPessoa(){
+async function salvarPessoa(req, res){
     const dados = await crud.salvar("pessoa", "",
     req.body);
     return dados;

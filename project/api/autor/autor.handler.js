@@ -7,7 +7,8 @@ async function buscarAutores() {
 }
 
 async function salvarAutor(req, res) {
-    const dados = await crud.salvar("autor", "",
+    const id = JSON.stringify(req.body.id);
+    const dados = await crud.salvar("autor", id,
     req.body);
     return dados;
 }

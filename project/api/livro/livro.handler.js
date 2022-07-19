@@ -6,9 +6,14 @@ async function buscarLivros(){
     return (dados);
 }
 
-async function salvarLivros(){
+async function salvarLivros(req, res){
     const dados = await crud.salvar("livros", "",
     req.body);
+    return dados;
+}
+
+async function editarLivros(req, res){
+    const dados = await crud.editar("livros", req.params.id, req.body);
     return dados;
 }
 

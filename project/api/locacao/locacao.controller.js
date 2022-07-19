@@ -8,11 +8,11 @@ router.get("/locacao", (req, res) => {
 })
 
 router.post("/locacao", (req, res) => {   
-    locacaoHandler.salvarLocacao(req, res).then(dados => res.json(dados));
+    locacaoHandler.salvarLocacao(req, res).then(dados => res.send(dados));
 })
 
 router.delete("/locacao/deletar/:id", (req, res) => {   
-    locacaoHandler.deletarLocacao(req, res).then(dados => res.json(dados));
+    locacaoHandler.deletarLocacao(req, res).then(dados => res.send(dados));
 })
 
 module.exports = router;
